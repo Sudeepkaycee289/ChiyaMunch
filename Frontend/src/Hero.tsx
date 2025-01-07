@@ -26,7 +26,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-between p-6 md:flex-row" style={{ margin: '0 72px' }}>
+    <div className="flex flex-col items-center justify-between p-6 md:flex-row mx-18">
       <div className="text-center mb-6 order-2 md:text-left md:mb-0 md:order-1">
         <h1 className="text-4xl font-bold mb-4">Chiya Munch</h1>
         <h4 className="text-lg mb-2">Your Bite, Your Delight</h4>

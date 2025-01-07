@@ -2,7 +2,7 @@
 const Logged = () => {
     return (
         <div className="p-5">
-            <h1 className="text-brown-700 text-2xl mb-5">Coffee</h1>
+            <h1 className="text-brown-700 text-2xl mb-5 mt-18">Coffee</h1>
             <div className="text-right mb-2.5">
                 <a href="#" className="text-brown-700 no-underline text-sm">View All</a>
             </div>
