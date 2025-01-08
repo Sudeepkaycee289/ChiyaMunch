@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Verification from './Verification';
+import { X } from 'lucide-react';
 
 interface SignupProps {
   onClose: () => void;
@@ -15,11 +16,10 @@ const Signup: React.FC<SignupProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-5 rounded-lg shadow-lg bg-white">
-      {/* <button className="close-button" onClick={onClose}>X</button> */}
+    <div className="max-w-md mx-auto p-4 rounded-lg shadow-lg bg-primary">
+      {/* <button className="close-button" onClick={onClose}><X /></button> */}
       <h2 className="text-center font-bold ">Sign Up</h2>
-      <div className="bg-white p-2 rounded-lg shadow-md">
-        <form onSubmit={handleSignup}>
+        <form onSubmit={handleSignup} className="flex flex-col w-full max-w-md mt-4" >
           <div className="mb-2">
             <label htmlFor="name" className="block mb-2 font-medium	">Name</label>
             <input type="text" id="name" name="name" required className="w-full p-2 border border-gray-300 rounded mb-2" />
@@ -38,7 +38,6 @@ const Signup: React.FC<SignupProps> = ({ onClose }) => {
           </div>
           <button type="submit" className="w-full p-2 bg-blue-600 text-white rounded hover:bg-blue-800">Sign Up</button>
         </form>
-      </div>
       <div className="text-center mt-2">
         <p className="mb-2">Already have an account? <a href="/login" className="text-blue-500">Login</a></p>
         <button className="w-full p-2 bg-blue-600 text-white rounded hover:bg-blue-800">Continue with Google</button>
