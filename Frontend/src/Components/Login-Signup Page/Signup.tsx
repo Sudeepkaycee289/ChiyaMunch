@@ -15,7 +15,7 @@ const Signup: React.FC<SignupProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-5 rounded-lg shadow-lg">
+    <div className="max-w-md mx-auto p-5 rounded-lg shadow-lg bg-white">
       {/* <button className="close-button" onClick={onClose}>X</button> */}
       <h2 className="text-center font-bold ">Sign Up</h2>
       <div className="bg-white p-2 rounded-lg shadow-md">
