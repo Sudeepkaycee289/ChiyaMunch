@@ -32,8 +32,8 @@ const Hero = () => {
         <h4 className="text-lg mb-2">Your Bite, Your Delight</h4>
         <h4 className="text-lg mb-2">तपाईंको स्वाद, तपाईंको खुशी।</h4>
         <div className="flex gap-3">
-          <button className="bg-blue-500 text-white py-2 px-4 rounded mb-2" onClick={handleLoginClick}>Login</button>
-          <button className="bg-gray-500 text-white py-2 px-4 rounded mb-2" onClick={handleSignupClick}>Sign Up</button>
+          <button className="bg-primary text-white py-2 px-4 rounded mb-2" onClick={handleLoginClick}>Login</button>
+          <button className="bg-white text-black border-2 border-black	 py-2 px-4 rounded mb-2" onClick={handleSignupClick}>Sign Up</button>
         </div>
       </div>
       <div className="order-1 md:order-2">
