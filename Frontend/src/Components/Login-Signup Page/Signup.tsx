@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Verification from './Verification';
-import { X } from 'lucide-react';
 
 interface SignupProps {
   onClose: () => void;

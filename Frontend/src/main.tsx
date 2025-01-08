@@ -10,8 +10,8 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Router>
       <Header/>
-      <Hero/>
-      {/* <Logged/> */}
+      {/* <Hero/> */}
+      <Logged/>
     </Router>
   </StrictMode>,
 )
