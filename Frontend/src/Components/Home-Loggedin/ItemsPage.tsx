@@ -1,4 +1,4 @@
-import ItemCard from "./itemcard";
+import ItemCard from "./ItemCard";
 
 const ItemsPage = () => {
     return (
