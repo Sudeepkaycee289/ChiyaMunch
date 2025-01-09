@@ -42,6 +42,8 @@ const Header: React.FC = () => {
             Chiya Munch
           </span>
         </a>
+
+        {/* Shopping Cart */}
         <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-4">
           <div className="relative">
             <ShoppingCart className="w-5 h-5 text-black" onClick={toggleCart} />
@@ -72,7 +74,8 @@ const Header: React.FC = () => {
               alt="User avatar"
             />
           </button>
-          {/* Dropdown menu */}
+
+          {/* Dropdown menu for profile */}
           {dropdownOpen && (
             <div
               className="my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow"
