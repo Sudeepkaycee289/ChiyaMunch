@@ -1,3 +1,7 @@
+import { Button } from "@/Components/ui/button";
+import { Loader2 } from "lucide-react"
+
+
 const Profile = () => {
   return (
     <div className="flex flex-col items-center p-4">
@@ -16,11 +20,11 @@ const Profile = () => {
         />
       </div>
       <div className="text-center mt-4">
-        <h1 className="text-2xl font-bold">Name</h1>
-        <p className="text-gray-600">Email</p>
+        <h1 className="text-xl font-bold">Ram Bahadur</h1>
+        <p className="text-gray-500">rambahadur289@gmail.com</p>
       </div>
-      <div className="mt-8 w-full max-w-md bg-white p-4 rounded-lg shadow-md">
         <h2 className="text-xl font-semibold mb-4">Subscription</h2>
+      <div className="mt-8 w-full flex flex-row max-w-screen-lg gap-4 bg-white p-4 rounded-lg shadow-md">
         <p className="mb-2">
           <span className="font-semibold">Start Date:</span> YYYY-MM-DD
         </p>
@@ -34,6 +38,10 @@ const Profile = () => {
           <span className="font-semibold">Next Renewal Date:</span> YYYY-MM-DD
         </p>
       </div>
+      <Button variant={"destructive"} className="bg-light">
+      <Loader2 className="animate-spin" />
+      Please wait
+    </Button>
     </div>
   );
 };

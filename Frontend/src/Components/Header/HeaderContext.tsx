@@ -19,7 +19,7 @@ export const HeaderProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   const [user, setUser] = useState<User>({
     name: "John Doe",
     email: "john.doe@example.com",
-    avatar: "/public/ChiyaMunchLogo.svg",
+    avatar: "/ChiyaMunchLogo.svg",
   });
   const [cartCount, setCartCount] = useState<number>(0);
 
