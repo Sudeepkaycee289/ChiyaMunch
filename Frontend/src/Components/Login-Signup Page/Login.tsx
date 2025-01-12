@@ -1,16 +1,25 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface LoginProps {
   onClose: () => void;
+  openSignup: (open: boolean) => void;
 }
 
-const Login: React.FC<LoginProps> = () => {
+const Login: React.FC<LoginProps> = ({onClose, openSignup}) => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    navigate('/src/Components/LogedIn/Logged.tsx');
+  };
+
   return (
     <div className=" flex items-center justify-center">
       <div className="login-container flex flex-col items-center rounded-lg p-6 shadow-lg">
         <h2 className="font-bold">Sign in</h2>
-        <p>Don't Have an account? <a href="/Signup" className="text-red-500 hover:underline mt-2">Join Us</a></p>
-        <form className="flex flex-col w-full max-w-md mt-4">
+        <p>Don't Have an account? <span onClick={()=> {onClose();openSignup(true)}} className="text-red-500 hover:underline mt-2 cursor-pointer">Join Us</span></p>
+        <form className="flex flex-col w-full max-w-md mt-4" onSubmit={handleSubmit}>
           <label className="mb-2">
             Email/Phone number:
             <input type="text" name="emailOrPhone" className="mt-1 p-2 border border-gray-300 rounded w-full" />

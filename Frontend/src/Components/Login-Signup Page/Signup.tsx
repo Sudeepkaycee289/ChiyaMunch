@@ -3,9 +3,10 @@ import Verification from './Verification';
 
 interface SignupProps {
   onClose: () => void;
+  openLogin: (open: boolean) => void;
 }
 
-const Signup: React.FC<SignupProps> = ({ onClose }) => {
+const Signup: React.FC<SignupProps> = ({ onClose, openLogin }) => {
   const [isVerificationOpen, setVerificationOpen] = useState(false);
 
   const handleSignup = (event: React.FormEvent) => {
@@ -18,7 +19,7 @@ const Signup: React.FC<SignupProps> = ({ onClose }) => {
     <div className="flex items-center justify-center min-h-screen">
       <div className="signup-container flex flex-col items-center rounded-lg p-6 shadow-lg bg-white">
         <h2 className="font-bold text-black mb-4">Sign Up</h2>
-        <p>Already have an account? <a href="/login" className="text-red-500 hover:underline mt-2">Login here</a></p>
+        <p>Already have an account? <span onClick={()=> {onClose();openLogin(true)}} className="text-red-500 hover:underline mt-2 cursor-pointer">Login here</span></p>
         <form className="flex flex-col w-full max-w-md mt-4" onSubmit={handleSignup}>
           <label className="mb-2">
             Name:

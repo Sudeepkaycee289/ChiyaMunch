@@ -1,0 +1,34 @@
+[
+  {
+    "Image": "public/ChiyaMunchLogo.svg",
+    "Title": "Kurauney Chiya",
+    "Subtitle": "Description for item 1",
+    "PriceA": 100,
+    "PriceB": 100,
+    "Category": "Tea"
+  },
+  {
+    "Image": "public/ChiyaMunchLogo.svg",
+    "Title": "Black Tea",
+    "Subtitle": "Description for item 2",
+    "PriceA": 8.99,
+    "PriceB": 9.99,
+    "Category": "Tea"
+  },
+  {
+    "Image": "public/ChiyaMunchLogo.svg",
+    "Title": "Cappucino",
+    "Subtitle": "Description for item 3",
+    "PriceA": 15.99,
+    "PriceB": 18.99,
+    "Category": "Coffee"
+  },
+  {
+    "Image": "public/ChiyaMunchLogo.svg",
+    "Title": "Cake",
+    "Subtitle": "Description for item 2",
+    "PriceA": 8.99,
+    "PriceB": 9.99,
+    "Category": "Snacks"
+  }
+]

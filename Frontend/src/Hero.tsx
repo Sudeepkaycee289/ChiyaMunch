@@ -40,10 +40,10 @@ const Hero = () => {
         <img src="/ChiyaMunch Image.svg" alt="ChiyaMunch" className="w-full h-auto" />
       </div>
       <Modal isOpen={showSignup} onRequestClose={handleCloseSignup} className="max-w-fit flex items-center justify-center mx-auto h-screen"   >
-        <Signup onClose={handleCloseSignup} />
+        <Signup openLogin={setShowLogin} onClose={handleCloseSignup} />
       </Modal>
       <Modal isOpen={showLogin} onRequestClose={handleCloseLogin} className="max-w-fit mx-auto flex items-center justify-center h-screen">
-        <Login onClose={handleCloseLogin} />
+        <Login openSignup={setShowSignup} onClose={handleCloseLogin} />
       </Modal>
     </div>
   );
