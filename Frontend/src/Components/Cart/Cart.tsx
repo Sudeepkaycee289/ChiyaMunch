@@ -33,7 +33,7 @@ const Cart = ({ items, onRemoveItem, onCheckout, isOpen, onClose }: CartProps) =
   };
 
   const handleDecreaseQty = (index: number) => {
-    if (items[index].qty > 1) {
+    if (items[index].qty > 30) { // Ensure quantity does not go below 30
       items[index].qty -= 1;
       setCartCount((prev: number) => Math.max(0, prev - 1));
     }

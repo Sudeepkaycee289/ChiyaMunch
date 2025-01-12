@@ -1,5 +1,6 @@
 import { Crown } from "lucide-react";
-import items from '../../../public/Data/Items.json';
+import items from "../../../public/Data/Items.json";
+import { useNavigate } from "react-router-dom";
 
 interface Item {
   Image: string;
@@ -12,8 +13,8 @@ interface Item {
 
 const categorizeItems = (items: Item[]) => {
   const categories: { [key: string]: Item[] } = {};
-  items.forEach(item => {
-    const category = item.Category || 'Uncategorized';
+  items.forEach((item) => {
+    const category = item.Category || "Uncategorized";
     if (!categories[category]) {
       categories[category] = [];
     }
@@ -23,20 +24,38 @@ const categorizeItems = (items: Item[]) => {
 };
 
 const Logged = () => {
+  const navigate = useNavigate();
   const categorizedItems = categorizeItems(items);
+
+  const handleViewAll = (category: string) => {
+    navigate(`/items/${category}`);
+  };
 
   return (
     <div className="p-5">
-      {Object.keys(categorizedItems).map(category => (
+      {Object.keys(categorizedItems).map((category) => (
         <div key={category}>
           <div className="flex justify-between items-center mb-5 mt-2">
             <h1 className="text-brown-700 text-2xl">{category}</h1>
-            <a href="#" className="text-primary hover:underline text-sm">View All</a>
+            <a
+              href="#"
+              onClick={() => handleViewAll(category)}
+              className="text-primary hover:underline text-sm"
+            >
+              View All
+            </a>
           </div>
           <div className="flex gap-5 flex-wrap">
             {categorizedItems[category].map((item, index) => (
-              <div key={index} className="flex flex-row border border-gray-300 rounded-lg p-2.5 gap-6 text-center bg-gray-100">
-                <img src={item.Image} alt={item.Title} className="max-w-[100px] max-h-[100px] rounded-lg" />
+              <div
+                key={index}
+                className="flex flex-row border border-gray-300 rounded-lg p-2.5 gap-6 text-center bg-gray-100"
+              >
+                <img
+                  src={item.Image}
+                  alt={item.Title}
+                  className="max-w-[100px] max-h-[100px] rounded-lg"
+                />
                 <div className="flex flex-col justify-between">
                   <h2 className="text-lg my-2.5 text-gray-800">{item.Title}</h2>
                   <div className="text-sm text-gray-600 flex justify-between items-end">
@@ -49,7 +68,6 @@ const Logged = () => {
                 </div>
               </div>
             ))}
-
           </div>
         </div>
       ))}
