@@ -11,8 +11,8 @@ const Subscriptions = () => {
       startDate: "2024-01-01",
       endDate: "2024-02-01",
       price: "NPR 999/month",
-      features: ["Unlimited Drinks", "Priority Service", "Special Discounts"]
-    }
+      features: ["Unlimited Drinks", "Priority Service", "Special Discounts"],
+    },
   ];
 
   return (
@@ -55,7 +55,9 @@ const Subscriptions = () => {
                 <p className="text-sm text-gray-500 mb-2">Features</p>
                 <ul className="list-disc list-inside space-y-1">
                   {sub.features.map((feature, index) => (
-                    <li key={index} className="text-sm">{feature}</li>
+                    <li key={index} className="text-sm">
+                      {feature}
+                    </li>
                   ))}
                 </ul>
               </div>

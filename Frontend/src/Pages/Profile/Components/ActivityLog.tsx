@@ -8,22 +8,22 @@ const ActivityLog = () => {
       type: "order",
       description: "Placed an order for Kurauni Chiya",
       date: "2024-01-15 14:30",
-      icon: ShoppingCart
+      icon: ShoppingCart,
     },
     {
       id: 2,
       type: "payment",
       description: "Added new payment method",
       date: "2024-01-14 09:15",
-      icon: CreditCard
+      icon: CreditCard,
     },
     {
       id: 3,
       type: "profile",
       description: "Updated profile information",
       date: "2024-01-13 16:45",
-      icon: UserCheck
-    }
+      icon: UserCheck,
+    },
   ];
 
   const getActivityIcon = (type: string) => {

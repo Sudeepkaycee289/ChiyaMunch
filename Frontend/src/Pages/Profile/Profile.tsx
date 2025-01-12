@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import ProfileInfo from './Components/ProfileInfo';
-import Subscriptions from './Components/Subscriptions';
-import OrderHistory from './Components/OrderHistory';
-import ActivityLog from './Components/ActivityLog';
-import PaymentMethods from './Components/PaymentMethods';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/Components/ui/tabs';
+import { useState } from "react";
+import ProfileInfo from "./Components/ProfileInfo";
+import Subscriptions from "./Components/Subscriptions";
+import OrderHistory from "./Components/OrderHistory";
+import ActivityLog from "./Components/ActivityLog";
+import PaymentMethods from "./Components/PaymentMethods";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/Components/ui/tabs";
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState("info");
@@ -15,7 +15,11 @@ const Profile = () => {
         <h1 className="text-3xl font-bold">Profile</h1>
       </div>
 
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
+      <Tabs
+        value={activeTab}
+        onValueChange={setActiveTab}
+        className="space-y-6"
+      >
         <TabsList>
           <TabsTrigger value="info">Personal Info</TabsTrigger>
           <TabsTrigger value="subscriptions">Subscriptions</TabsTrigger>

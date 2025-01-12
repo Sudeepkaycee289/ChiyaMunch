@@ -10,10 +10,10 @@ const OrderHistory = () => {
       status: "Delivered",
       items: [
         { name: "Kurauni Chiya", quantity: 2, price: "NPR 128" },
-        { name: "Iced Matcha Latte", quantity: 1, price: "NPR 160" }
+        { name: "Iced Matcha Latte", quantity: 1, price: "NPR 160" },
       ],
-      total: "NPR 416"
-    }
+      total: "NPR 416",
+    },
   ];
 
   return (
@@ -27,8 +27,7 @@ const OrderHistory = () => {
         <Card key={order.id}>
           <CardHeader>
             <div className="flex items-center justify-between">
-              <CardTitle
-               className="flex items-center gap-2">
+              <CardTitle className="flex items-center gap-2">
                 <Package className="h-5 w-5" />
                 Order {order.id}
               </CardTitle>
@@ -53,7 +52,9 @@ const OrderHistory = () => {
                 <div className="space-y-2">
                   {order.items.map((item, index) => (
                     <div key={index} className="flex justify-between text-sm">
-                      <span>{item.name} x{item.quantity}</span>
+                      <span>
+                        {item.name} x{item.quantity}
+                      </span>
                       <span>{item.price}</span>
                     </div>
                   ))}

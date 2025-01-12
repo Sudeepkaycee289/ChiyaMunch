@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { Button } from '@/Components/ui/button';
-import { Input } from '@/Components/ui/input';
-import { Label } from '@/Components/ui/label';
-import { useToast } from '@/hooks/useToast';
+import { useState } from "react";
+import { Button } from "@/Components/ui/button";
+import { Input } from "@/Components/ui/input";
+import { Label } from "@/Components/ui/label";
+import { useToast } from "@/hooks/useToast";
 
 const ProfileInfo = () => {
   const { toast } = useToast();
@@ -11,7 +11,7 @@ const ProfileInfo = () => {
     name: "John Doe",
     email: "john@example.com",
     phone: "+1234567890",
-    address: "123 Main St"
+    address: "123 Main St",
   });
 
   const handleSave = () => {
@@ -19,7 +19,7 @@ const ProfileInfo = () => {
     setIsEditing(false);
     toast({
       title: "Profile Updated",
-      description: "Your profile information has been updated successfully."
+      description: "Your profile information has been updated successfully.",
     });
   };
 
@@ -27,7 +27,7 @@ const ProfileInfo = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-semibold">Personal Information</h2>
-        <Button 
+        <Button
           variant={isEditing ? "outline" : "default"}
           onClick={() => setIsEditing(!isEditing)}
         >
@@ -53,7 +53,9 @@ const ProfileInfo = () => {
             type="email"
             value={formData.email}
             disabled={!isEditing}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
           />
         </div>
 
@@ -63,7 +65,9 @@ const ProfileInfo = () => {
             id="phone"
             value={formData.phone}
             disabled={!isEditing}
-            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, phone: e.target.value })
+            }
           />
         </div>
 
@@ -73,13 +77,13 @@ const ProfileInfo = () => {
             id="address"
             value={formData.address}
             disabled={!isEditing}
-            onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, address: e.target.value })
+            }
           />
         </div>
 
-        {isEditing && (
-          <Button onClick={handleSave}>Save Changes</Button>
-        )}
+        {isEditing && <Button onClick={handleSave}>Save Changes</Button>}
       </div>
     </div>
   );

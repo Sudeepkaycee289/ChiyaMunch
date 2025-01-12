@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { Input } from '@/Components/ui/input';
-import { Button } from '@/Components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/Components/ui/card';
-import { Label } from '@/Components/ui/label';
-import { FileUploader } from '@/Components/Shared/FileUploader';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/Components/ui/tabs';
+import { useState } from "react";
+import { Input } from "@/Components/ui/input";
+import { Button } from "@/Components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card";
+import { Label } from "@/Components/ui/label";
+import { FileUploader } from "@/Components/Shared/FileUploader";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/Components/ui/tabs";
 
 const PaymentMethods = () => {
   const [activeTab, setActiveTab] = useState("card");
@@ -50,7 +50,7 @@ const PaymentMethods = () => {
                 <p>Account: 1234567890</p>
                 <p>SWIFT: EXBKXXXX</p>
               </div>
-              <FileUploader 
+              <FileUploader
                 label="Upload Payment Proof"
                 onFileSelect={(file) => console.log(file)}
                 accept="image/*,.pdf"
@@ -62,9 +62,13 @@ const PaymentMethods = () => {
           <TabsContent value="online">
             <div className="space-y-4">
               <div className="grid gap-4">
-                <Button variant="outline" className="w-full">Pay with PayPal</Button>
-                <Button variant="outline" className="w-full">Pay with Stripe</Button>
-                <FileUploader 
+                <Button variant="outline" className="w-full">
+                  Pay with PayPal
+                </Button>
+                <Button variant="outline" className="w-full">
+                  Pay with Stripe
+                </Button>
+                <FileUploader
                   label="Upload Payment Screenshot"
                   onFileSelect={(file) => console.log(file)}
                   accept="image/*"
