@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 interface LoginProps {
   onClose: () => void;
-  openSignup: (open: boolean) => void;
+  openSignup?: (open: boolean) => void;
 }
 
 const Login: React.FC<LoginProps> = ({onClose, openSignup}) => {
@@ -18,7 +18,7 @@ const Login: React.FC<LoginProps> = ({onClose, openSignup}) => {
     <div className=" flex items-center justify-center">
       <div className="login-container flex flex-col items-center rounded-lg p-6 shadow-lg">
         <h2 className="font-bold">Sign in</h2>
-        <p>Don't Have an account? <span onClick={()=> {onClose();openSignup(true)}} className="text-red-500 hover:underline mt-2 cursor-pointer">Join Us</span></p>
+        <p>Don't Have an account? <span onClick={()=> {onClose(); openSignup && openSignup(true)}} className="text-red-500 hover:underline mt-2 cursor-pointer">Join Us</span></p>
         <form className="flex flex-col w-full max-w-md mt-4" onSubmit={handleSubmit}>
           <label className="mb-2">
             Email/Phone number:
