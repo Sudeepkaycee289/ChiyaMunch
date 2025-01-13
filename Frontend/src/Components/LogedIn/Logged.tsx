@@ -37,13 +37,11 @@ const Logged = () => {
         <div key={category}>
           <div className="flex justify-between items-center mb-5 mt-2">
             <h1 className="text-brown-700 text-2xl">{category}</h1>
-            <a
-              href="#"
+            <span
               onClick={() => handleViewAll(category)}
-              className="text-primary hover:underline text-sm"
-            >
+              className="text-primary hover:underline text-sm cursor-pointer">
               View All
-            </a>
+              </span>
           </div>
           <div className="flex gap-5 flex-wrap">
             {categorizedItems[category].map((item, index) => (

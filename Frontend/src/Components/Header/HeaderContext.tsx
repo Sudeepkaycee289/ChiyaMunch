@@ -7,8 +7,8 @@ interface User {
 }
 
 interface HeaderContextProps {
-  user: User;
-  setUser: React.Dispatch<React.SetStateAction<User>>;
+  user: User|null;
+  setUser: React.Dispatch<React.SetStateAction<User|null>>;
   cartCount: number;
   setCartCount: React.Dispatch<React.SetStateAction<number>>;
 }
@@ -16,11 +16,7 @@ interface HeaderContextProps {
 const HeaderContext = createContext<HeaderContextProps | undefined>(undefined);
 
 export const HeaderProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User>({
-    name: "John Doe",
-    email: "john.doe@example.com",
-    avatar: "/ChiyaMunchLogo.svg",
-  });
+  const [user, setUser] = useState<User|null>(null);
   const [cartCount, setCartCount] = useState<number>(0);
 
   return (

@@ -7,15 +7,11 @@ module.exports = {
   theme: {
   	extend: {
   		colors: {
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
+  			primary: '#FFB17F',
+  			secondary: '#D29269',
+  			third: '#3D2412',
+  			button: '#E3AA4D',
   			light: '#D29269',
-  			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
-  			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

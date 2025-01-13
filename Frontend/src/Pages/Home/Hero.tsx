@@ -1,7 +1,7 @@
+import Login from '@/Components/Login-Signup Page/Login';
+import Signup from '@/Components/Login-Signup Page/Signup';
 import { useState } from 'react';
 import Modal from 'react-modal';
-import Signup from './Components/Login-Signup Page/Signup';
-import Login from './Components/Login-Signup Page/Login';
 
 Modal.setAppElement('#root'); // Set the app element for react-modal
 

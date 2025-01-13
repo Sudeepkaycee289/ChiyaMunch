@@ -46,9 +46,9 @@ const PaymentMethods = () => {
             <div className="space-y-4">
               <div className="rounded-lg border p-4">
                 <h3 className="font-semibold">Bank Details</h3>
-                <p>Bank: Example Bank</p>
+                <p>Bank: NIC Bank</p>
                 <p>Account: 1234567890</p>
-                <p>SWIFT: EXBKXXXX</p>
+                <p>NIC: EXBKXXXX</p>
               </div>
               <FileUploader
                 label="Upload Payment Proof"
@@ -63,10 +63,10 @@ const PaymentMethods = () => {
             <div className="space-y-4">
               <div className="grid gap-4">
                 <Button variant="outline" className="w-full">
-                  Pay with PayPal
+                  Pay with Khalti
                 </Button>
                 <Button variant="outline" className="w-full">
-                  Pay with Stripe
+                  Pay with ESewa
                 </Button>
                 <FileUploader
                   label="Upload Payment Screenshot"

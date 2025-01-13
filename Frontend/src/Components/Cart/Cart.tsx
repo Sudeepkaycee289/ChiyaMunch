@@ -39,7 +39,7 @@ const Cart = ({ items, onRemoveItem, onCheckout, isOpen, onClose }: CartProps) =
     }
   };
 
-  const total = items.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const total = Math.floor( items.reduce((sum, item) => sum + item.price * item.qty, 0));
 
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
@@ -85,7 +85,7 @@ const Cart = ({ items, onRemoveItem, onCheckout, isOpen, onClose }: CartProps) =
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="font-medium">NPR {item.price * item.qty}</p>
+                    <p className="font-medium">NPR {Math.floor( item.price * item.qty)}</p>
                     <button
                       onClick={() => handleRemoveItem(index)}
                       className="mt-2 rounded-full p-1 hover:bg-gray-100"
