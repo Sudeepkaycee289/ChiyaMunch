@@ -5,7 +5,8 @@
     "Subtitle": "Description for item 1",
     "PriceA": 100,
     "PriceB": 100,
-    "Category": "Tea"
+    "Category": "Tea",
+    "paid": false
   },
   {
     "Image": "public/ChiyaMunchLogo.svg",
@@ -13,7 +14,8 @@
     "Subtitle": "Description for item 2",
     "PriceA": 8.99,
     "PriceB": 9.99,
-    "Category": "Tea"
+    "Category": "Tea",
+    "paid": true
   },
   {
     "Image": "public/ChiyaMunchLogo.svg",
@@ -21,7 +23,8 @@
     "Subtitle": "Description for item 3",
     "PriceA": 15.99,
     "PriceB": 18.99,
-    "Category": "Coffee"
+    "Category": "Coffee",
+    "paid": false
   },
   {
     "Image": "public/ChiyaMunchLogo.svg",
@@ -29,6 +32,7 @@
     "Subtitle": "Description for item 2",
     "PriceA": 8.99,
     "PriceB": 9.99,
-    "Category": "Snacks"
+    "Category": "Snacks",
+    "paid": false
   }
 ]

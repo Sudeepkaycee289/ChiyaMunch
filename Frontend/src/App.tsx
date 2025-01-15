@@ -5,6 +5,7 @@ import Logged from "./Components/LogedIn/Logged";
 import ItemsViewPage from './Components/Items/Items-View-Page';
 import Profile from "./Pages/Profile/Profile";
 import Checkout from "./Pages/Checkout/Checkout.tsx";
+import Order from "./Components/Order Page/Order.tsx";
 
 export const App = () => { return(
   <Routes>
@@ -13,5 +14,6 @@ export const App = () => { return(
     <Route path="/ChiyaMunch" element={<Layout ><Logged/></Layout>} />
     <Route path="/items/:category" element={<Layout ><ItemsViewPage/></Layout>} />
     <Route path="/Checkout" element={<Layout ><Checkout/></Layout>} />
+    <Route path="/Order" element={<Layout ><Order/></Layout>} />
   </Routes>)
 };
