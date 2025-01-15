@@ -11,7 +11,7 @@ const Subscriptions = () => {
       startDate: "2024-01-01",
       endDate: "2024-02-01",
       price: "NPR 999/month",
-      features: ["Unlimited Drinks", "Priority Service", "Special Discounts"],
+      features: ["30 Drinks/Month", "Priority Service", "Special Discounts"],
     },
   ];
 
@@ -19,7 +19,7 @@ const Subscriptions = () => {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-semibold">Your Subscriptions</h2>
-        <Button>Upgrade Plan</Button>
+        <Button>Add Subscriptio</Button>
       </div>
 
       {subscriptions.map((sub) => (
@@ -40,11 +40,11 @@ const Subscriptions = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-sm text-gray-500">Start Date</p>
-                  <p className="font-medium">{sub.startDate}</p>
+                  <p className="font-medium text-green-500">{sub.startDate}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">End Date</p>
-                  <p className="font-medium">{sub.endDate}</p>
+                  <p className="font-medium text-red-500">{sub.endDate}</p>
                 </div>
               </div>
               <div>

@@ -34,16 +34,16 @@ const Logged = () => {
   return (
     <div className="p-5">
       {Object.keys(categorizedItems).map((category) => (
-        <div key={category}>
-          <div className="flex justify-between items-center mb-5 mt-2">
+        <div className="border rounded m-2	gap-2" key={category}>
+          <div className="flex justify-between items-center mb-5 m-2">
             <h1 className="text-brown-700 text-2xl">{category}</h1>
             <span
               onClick={() => handleViewAll(category)}
-              className="text-primary hover:underline text-sm cursor-pointer">
+              className="text-primary hover:underline text-sm mr-2 cursor-pointer">
               View All
               </span>
           </div>
-          <div className="flex gap-5 flex-wrap">
+          <div className="flex gap-5 m-2 flex-wrap">
             {categorizedItems[category].map((item, index) => (
               <div
                 key={index}
@@ -56,8 +56,8 @@ const Logged = () => {
                 />
                 <div className="flex flex-col justify-between">
                   <h2 className="text-lg my-2.5 text-gray-800">{item.Title}</h2>
-                  <div className="text-sm text-gray-600 flex justify-between items-end">
-                    <p className="line-through">NPR {item.PriceA}</p>
+                  <div className="text-sm text-gray-600 flex justify-between gap-3 items-end">
+                    <p className="text-red-500">NPR {item.PriceA}</p>
                     <div className="text-sm text-green-600 flex flex-col items-end leading-3">
                       <Crown className="crown-icon w-5 h-5 transform scale-75 rotate-45" />
                       <p>NPR {item.PriceB}</p>

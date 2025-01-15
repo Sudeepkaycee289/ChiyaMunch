@@ -20,7 +20,7 @@ const OrderHistory = () => {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-semibold">Order History</h2>
-        <Button variant="outline">Download All</Button>
+        <Button variant="outline">View All</Button>
       </div>
 
       {orders.map((order) => (
